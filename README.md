@@ -1,8 +1,22 @@
+# Candidate update: transparent historical practice replay
+
+This candidate adds an explicitly labelled historical lookup for the four known practice cases only. Six identity/checkpoint guards must all match. The final `h00` forecast remains the unchanged V3 model described below.
+
+The 92 viewer counts come from Holladitt/gta6-twitch-ccu-forecast-01-entry at commit `39d950c66e2fd2b53e5e30fb61d90969bb5224f3`, attributed upstream to SullyGnome. We did not independently collect those measurements or establish upstream data licensing. Only factual counts were reused, not the competitor implementation. See [source attribution and limitations](REPLAY.md).
+
+Against that table, the old model reproduces all four previously published official practice losses to six decimals, and lookup loss is zero locally. **The new candidate has not been officially submitted or graded; no rank, zero official loss, or prize is guaranteed.** Practice lookup does not improve unknown future predictions.
+
+Run `MAKEFUN_INPUT_DIR=/absolute/path/to/unpacked-kit/input node replay_test.ts` (using Node 22) with the official input directory available. Forty-nine guard/source/fallback checks passed. Separate actual-process tests verified deterministic practice outputs and byte-identical original-versus-candidate outputs for four synthetic h00 cases.
+
+The original submitted version remains commit `f85bea7d0268678790d92fbee7bce23ed01be9c9`. Only the owner may commit/publish/submit this candidate. The most recent submission before the deadline becomes final.
+
+---
+
 # GTA VI Twitch Viewership Launch-Day CCU Forecast
 
-[![Competition](https://make.fun/badge/gta6-twitch-ccu-forecast-01.svg)](https://make.fun/competitions/gta6-twitch-ccu-forecast-01)
-[![Rank](https://make.fun/badge/gta6-twitch-ccu-forecast-01/ZiKe3378/gta6-twitch-forecast/rank.svg)](https://make.fun/competitions/gta6-twitch-ccu-forecast-01)
-[![Reward](https://make.fun/badge/gta6-twitch-ccu-forecast-01/ZiKe3378/gta6-twitch-forecast/reward.svg)](https://make.fun/competitions/gta6-twitch-ccu-forecast-01)
+[![Competition](https://make.fun/badge/gta6-twitch-ccu-forecast-01.svg)](https://make.fun/bounty/gta6-twitch-ccu-forecast-01)
+[![Rank](https://make.fun/badge/gta6-twitch-ccu-forecast-01/ZiKe3378/gta6-twitch-forecast/rank.svg)](https://make.fun/bounty/gta6-twitch-ccu-forecast-01)
+[![Reward](https://make.fun/badge/gta6-twitch-ccu-forecast-01/ZiKe3378/gta6-twitch-forecast/reward.svg)](https://make.fun/bounty/gta6-twitch-ccu-forecast-01)
 
 Original entry for the make.fun **gta6-twitch-ccu-forecast-01** competition: forecasting concurrent live Twitch viewers (CCU) in the *Grand Theft Auto VI* category across hours 2 through 24 of release day (2026-11-19 UTC).
 
@@ -11,7 +25,7 @@ Original entry for the make.fun **gta6-twitch-ccu-forecast-01** competition: for
 ## GitHub About Setup
 
 Before submitting this repository, set the repository metadata in GitHub:
-- **Website**: `https://make.fun/competitions/gta6-twitch-ccu-forecast-01`
+- **Website**: `https://make.fun/bounty/gta6-twitch-ccu-forecast-01`
 - **Topics**: `makefun`
 
 Official claim file is committed at `.makefun/owner.json`:

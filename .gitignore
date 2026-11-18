@@ -1,0 +1,5 @@
+input-kit/
+local-tools/
+out/
+*.tmp
+scratch/
